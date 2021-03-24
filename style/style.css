@@ -142,7 +142,7 @@ body{
 .content{
   height: 100%;
   padding: 40px;
-  overflow: hidden;
+  
   overflow-y: scroll;
 }
 ::-webkit-scrollbar-thumb{
@@ -206,6 +206,9 @@ body{
 
 #content_tour-plan, #content_location, #content_gallery,#content_review{
   display: none;
+}
+.galler_image img{
+  object-fit: contain;
 }
 
 
@@ -277,23 +280,21 @@ body{
 .toggle{
   position: absolute;
   top: calc(50% - 20px);
-  right: -18px;
-  width: 50px;
-  height: 50px;
+  right: -10px;
+  font-size: 50px;
   cursor: pointer;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
+  color: var(--red-color);
+  /* box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.25); */
   display: none;
 }
 .toggle::before{
   content: '<';
+  color: var(--red-color);
   font-size: 30px;
   font-weight: 900;
-  color: var(--dark-color);
   position: absolute;
   left: 11px;
-  top: 7px;
+  top: 15px;
 }
 .toggle.active::before{
   content: '>';
@@ -304,7 +305,7 @@ body{
   right: 30px;
   top: -90px;
   width: 2px;
-  background: var(--dark-color);
+  background: var(--red-color);
   height: 80px;
 }
 
@@ -313,6 +314,6 @@ body{
   right: 30px;
   bottom: -90px;
   width: 2px;
-  background: var(--dark-color);
+  background: var(--red-color);
   height: 80px;
 }
